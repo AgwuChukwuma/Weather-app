@@ -62,7 +62,6 @@ const App = () => {
                     temperature={hour.temp_c}
                   />
                 ))}
-                <img src={Clear} alt="Clear Weather Icon" style={{ width: 24, height: 24 }} />
               </ul>
             </div>
           </>
