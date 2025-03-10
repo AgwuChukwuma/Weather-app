@@ -1,20 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const HourlyWeather = ({ time, icon, temperature }) => {
+const CurrentWeather = ({ currentWeather }) => {
   return (
-    <li className="weather-item">
-      <p className="time">{time.slice(-5)}</p>
-      <img src={icon} alt="weather icon" className="weather-icon" />
-      <p className="temperature">{temperature}°</p>
-    </li>
+    <div className="current-weather">
+      <img src="pics/sun.svg" className="weather-icon" alt="weather icon" />
+      {currentWeather.temperature != null ? (
+        <>
+          <h2 className="temperature">
+            {currentWeather.temperature} <span>°C</span>
+          </h2>
+          <p className="description">{currentWeather.description}</p>
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
   );
 };
 
-HourlyWeather.propTypes = {
-  time: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  temperature: PropTypes.number.isRequired,
+CurrentWeather.propTypes = {
+  currentWeather: PropTypes.shape({
+    temperature: PropTypes.number,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
-export default HourlyWeather;
+export default CurrentWeather;
