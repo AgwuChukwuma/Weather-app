@@ -20,5 +20,5 @@ A simple weather app built with React that provides current weather and hourly f
 
 ## Usage
 
--Search for weather by city: Type the name of a city in the search input and press Enter.
--Get weather by geolocation: Click the location button to get weather data for your current location.
+- Search for weather by city: Type the name of a city in the search input and press Enter.
+- Get weather by geolocation: Click the location button to get weather data for your current location.
