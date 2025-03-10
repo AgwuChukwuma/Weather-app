@@ -1,13 +1,20 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const HourlyWeather = () =>{
-    return(
-        <li className="weather-item">
-        <p className="time">00:00</p>
-        <img src="pics/sun.svg" className="weather.icon" />
-        <p className="temperature">20°</p>
-      </li>
-    )
-}
+const HourlyWeather = ({ time, icon, temperature }) => {
+  return (
+    <li className="weather-item">
+      <p className="time">{time.slice(-5)}</p>
+      <img src={icon} alt="weather icon" className="weather-icon" />
+      <p className="temperature">{temperature}°</p>
+    </li>
+  );
+};
 
-export default HourlyWeather
+HourlyWeather.propTypes = {
+  time: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  temperature: PropTypes.number.isRequired,
+};
+
+export default HourlyWeather;
