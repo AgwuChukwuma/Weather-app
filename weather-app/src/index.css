@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Resetting default styles */
 * {
   margin: 0;
   padding: 0;
@@ -115,7 +114,6 @@ body {
   border-color: #a38cd9;
 }
 
-/* Weather section styles */
 .weather-section {
   padding: 16px 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -153,7 +151,6 @@ body {
   font-size: 1.25rem;
 }
 
-/* Hourly forecast styles */
 .hourly-forecast {
   padding: 16px 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -208,7 +205,6 @@ body {
   font-weight: 500;
 }
 
-/* Spinner styles */
 .loading-spinner {
   display: flex;
   justify-content: center;
@@ -221,7 +217,6 @@ body {
 
 /* Media Queries for Responsiveness */
 
-/* Small screens (e.g., phones) */
 @media screen and (max-width: 768px) {
   .container {
     width: 90%;
@@ -249,7 +244,6 @@ body {
   }
 }
 
-/* Extra small screens (e.g., portrait mobile) */
 @media screen and (max-width: 480px) {
   .current-weather .temperature {
     font-size: 2rem;
